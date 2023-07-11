@@ -1,0 +1,59 @@
+.container {
+  margin-top: 50px;
+  animation: fade 1.5s ease-in;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  } to {
+      opacity: 1;
+  }
+}
+
+.top {
+  display: flex;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title{
+  font-size: 40px;
+}
+
+.author {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.imageContainer {
+  flex: 1;
+  height: 300px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: justify
+}

@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    gap: 100px;
+  }
+  
+  .posts {
+    flex: 1;
+  }
+  
+  .post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0px;
+  }
+  
+  .imgContainer {
+    width: 200px;
+    height: 100px;
+    position: Ū;
+  }
+  
+  .image {
+    object-fit: cover;
+  }
+  
+  .delete {
+    cursor: pointer;
+    color: red;
+  }
+  
+  .new {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fade 1.5s  ease-in;
+  }
+
+  @keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .input,
+  .textArea {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #bbb;
+    border-radius: 3px;
+    color: #bbb;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #3162cc;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    font-weight: bold;
+  }
