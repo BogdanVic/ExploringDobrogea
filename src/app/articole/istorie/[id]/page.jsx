@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import ReactHtmlParser from 'react-html-parser';
+import { Parser } from "html-to-react";
 
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/articole/istorie/${id}`, {
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }) {
 
 const BlogPost = async ({ params }) => {
   const data = await getData(params.id);
+  const htmlParser = new Parser();
   const parsedContent = data.content;
   return (
     <div className={styles.container}>
@@ -55,7 +56,7 @@ const BlogPost = async ({ params }) => {
         </div>
       </div>
       <div className={styles.content}>
-        <p className={styles.text}>{ReactHtmlParser(parsedContent)}</p>
+        <p className={styles.text}>{htmlParser.parse(parsedContent)}</p>
       </div>
     </div>
   );
