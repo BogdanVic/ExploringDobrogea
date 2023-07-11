@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Parser } from "html-to-react";
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/articole/istorie/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/articole/cultura/${id}`, {
     cache: "no-store",
   });
 
